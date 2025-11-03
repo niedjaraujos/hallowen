@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+$purple: #732eb8;
+$purple100: #402659;
+$orange: #f06e42;
+$orange100: #ff3300;
+$white: #ffffff;
+$gray100: #beb4a7;
+$darkness: #181616;
+$darkness100: #211e1c;
+$black: #000000;
+$purple200: #1a0f2e;
+$purple300: #2d1b47;
+
+body {
+  width: 100vw;
+  background-color: $purple300;
+  //border: 2px solid rgba(255, 107, 53, 0.25);
+}
