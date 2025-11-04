@@ -189,4 +189,70 @@ main .costumes .costumes-competition button:hover {
 }
 main .costumes .costumes-competition button img {
   width: 40px;
+}
+
+main .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding-block: 100px;
+}
+main .form p {
+  font-size: 1.5rem;
+}
+main .form form {
+  background-color: #402659;
+  width: 40vw;
+  border-radius: 12px;
+  border: 1px solid #fd4619;
+  padding: 40px;
+}
+main .form form div {
+  display: flex;
+  flex-direction: column;
+  margin: 24px 0;
+}
+main .form form div label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+main .form form div img {
+  width: 30px;
+  height: 30px;
+}
+main .form form div input,
+main .form form div select,
+main .form form div textarea {
+  width: 100%;
+  padding: 15px;
+  outline: none;
+  border-radius: 12px;
+  border: 2px solid #fd4619;
+  background-color: #2d1b47;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+main .form form textarea {
+  height: 130px;
+}
+
+footer {
+  height: 100px;
+  background-color: #1a0f2e;
+  text-align: center;
+  padding: 30px;
+}
+footer p {
+  font-size: 1.2rem;
+}
+footer p span {
+  color: #f06e42;
+}
+footer img {
+  width: 20px;
 }/*# sourceMappingURL=style.css.map */
