@@ -28,8 +28,11 @@ h2 {
   background: linear-gradient(to right, $purple, $orange);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 5rem;
 }
-
+p {
+  color: $gray100;
+}
 .hero {
   background-image: url('/assets/bg.jpg');
   background-size: cover;
@@ -49,7 +52,6 @@ h2 {
   }
   p {
     font-size: 2.5rem;
-    color: $gray100;
   }
 }
 .hero .hero-btns {
@@ -80,7 +82,6 @@ main .details {
   padding: 60px;
 
   h2 {
-    font-size: 5rem;
     padding: 30px 0;
   }
 }
@@ -94,12 +95,17 @@ main .details-cards {
     border-radius: 12px;
     border: 1px solid $orange100;
     background-color: $purple100;
+
+    &:hover {
+      .highlight {
+        color: $orange;
+      }
+    }
     img {
       width: 100px;
       margin-bottom: 20px;
     }
     p {
-      color: $gray100;
       font-size: 1rem;
     }
     .title {
@@ -110,12 +116,91 @@ main .details-cards {
       color: $white;
       font-size: 1.75rem;
       margin-block: 10px;
-      &:hover {
-        color: $orange;
-      }
     }
     .lastimg {
       width: 80px;
+    }
+  }
+}
+main .costumes {
+  text-align: center;
+  padding: 60px;
+
+  .costumes-p {
+    font-size: 1.5rem;
+    width: 700px;
+    margin: 40px auto;
+  }
+}
+
+main .costumes-cards {
+  display: flex;
+  justify-content: space-evenly;
+
+  .costumes-cards_card {
+    width: 220px;
+    background-color: #1a0f2e;
+    border-radius: 12px;
+    padding: 40px 20px;
+
+    img {
+      width: 110px;
+      height: 150px;
+    }
+    h3 {
+      font-size: 1.25rem;
+      color: $white;
+      margin: 20px 0;
+    }
+    p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+  }
+}
+main .costumes .costumes-competition {
+  width: 95%;
+  background-color: #211e1c;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+  border-radius: 12px;
+  .costumes-competition_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    img {
+      width: 24px;
+    }
+    h4 {
+      font-size: 2rem;
+      color: $orange100;
+    }
+  }
+  p {
+    font-size: 1.25rem;
+  }
+  button {
+    background-color: $orange100;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    color: $white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $orange;
+    }
+    img {
+      width: 40px;
     }
   }
 }

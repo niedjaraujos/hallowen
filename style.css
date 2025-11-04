@@ -18,6 +18,11 @@ h2 {
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 5rem;
+}
+
+p {
+  color: #beb4a7;
 }
 
 .hero {
@@ -40,7 +45,6 @@ h2 {
 }
 .hero p {
   font-size: 2.5rem;
-  color: #beb4a7;
 }
 
 .hero .hero-btns {
@@ -70,7 +74,6 @@ main .details {
   padding: 60px;
 }
 main .details h2 {
-  font-size: 5rem;
   padding: 30px 0;
 }
 
@@ -86,12 +89,14 @@ main .details-cards .card {
   border: 1px solid #fd4619;
   background-color: #402659;
 }
+main .details-cards .card:hover .highlight {
+  color: #f06e42;
+}
 main .details-cards .card img {
   width: 100px;
   margin-bottom: 20px;
 }
 main .details-cards .card p {
-  color: #beb4a7;
   font-size: 1rem;
 }
 main .details-cards .card .title {
@@ -103,9 +108,85 @@ main .details-cards .card .highlight {
   font-size: 1.75rem;
   margin-block: 10px;
 }
-main .details-cards .card .highlight:hover {
-  color: #f06e42;
-}
 main .details-cards .card .lastimg {
   width: 80px;
+}
+
+main .costumes {
+  text-align: center;
+  padding: 60px;
+}
+main .costumes .costumes-p {
+  font-size: 1.5rem;
+  width: 700px;
+  margin: 40px auto;
+}
+
+main .costumes-cards {
+  display: flex;
+  justify-content: space-evenly;
+}
+main .costumes-cards .costumes-cards_card {
+  width: 220px;
+  background-color: #1a0f2e;
+  border-radius: 12px;
+  padding: 40px 20px;
+}
+main .costumes-cards .costumes-cards_card img {
+  width: 110px;
+  height: 150px;
+}
+main .costumes-cards .costumes-cards_card h3 {
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin: 20px 0;
+}
+main .costumes-cards .costumes-cards_card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+main .costumes .costumes-competition {
+  width: 95%;
+  background-color: #211e1c;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+  border-radius: 12px;
+}
+main .costumes .costumes-competition .costumes-competition_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+main .costumes .costumes-competition .costumes-competition_title img {
+  width: 24px;
+}
+main .costumes .costumes-competition .costumes-competition_title h4 {
+  font-size: 2rem;
+  color: #fd4619;
+}
+main .costumes .costumes-competition p {
+  font-size: 1.25rem;
+}
+main .costumes .costumes-competition button {
+  background-color: #fd4619;
+  border: none;
+  border-radius: 50px;
+  padding: 15px 30px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+main .costumes .costumes-competition button:hover {
+  background-color: #f06e42;
+}
+main .costumes .costumes-competition button img {
+  width: 40px;
 }/*# sourceMappingURL=style.css.map */
