@@ -1,24 +1,27 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Creepster&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
+  text-decoration: none;
 }
 
 body {
-  width: 100vw;
-  background-color: #2d1b47;
+  min-height: 100vh;
+  background-color: #442164;
 }
 
 h1,
 h2 {
   font-family: "Creepster", sans-serif;
-  background: linear-gradient(to right, #732eb8, #f06e42);
+  background: linear-gradient(45deg, #b14101, #8400ff);
   -webkit-background-clip: text;
           background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 5rem;
+  animation: gentleFloat 4s ease-in-out infinite;
 }
 
 p {
@@ -34,35 +37,50 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  width: 100%;
+  height: inherit;
+  background: linear-gradient(to top, #000000, transparent);
+  text-align: center;
+  position: absolute;
+  opacity: 80%;
 }
 .hero h1 {
   font-size: 9rem;
 }
 .hero .subtitle {
   font-size: 4rem;
-  color: #f06e42;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 5px #b14101, 0 0 10px #b14101, 0 0 20px #ff7e33, 0 0 30px #ff7e33;
 }
 .hero p {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .hero .hero-btns {
   display: flex;
   align-items: center;
-  gap: 30px;
-  margin-top: 20px;
+  gap: 40px;
+  margin-top: 30px;
 }
 .hero .hero-btns a {
-  background-color: #fd4619;
+  background-color: #b14101;
   color: #ffffff;
-  text-decoration: none;
   border-radius: 50px;
   padding: 15px 30px;
   font-size: 1.5rem;
+  z-index: 1;
+  border: 1px solid #b14101;
 }
 .hero .hero-btns a:hover {
-  background-color: #f06e42;
+  box-shadow: 0 4px 10px #ff7e33;
+  border: 1px solid #ff7e33;
+  background-color: transparent;
 }
 .hero .hero-btns a img {
   width: 34px;
@@ -71,10 +89,13 @@ p {
 
 main .details {
   text-align: center;
-  padding: 60px;
+  padding: 100px;
+  margin-bottom: 100px;
+  background-image: linear-gradient(to bottom, #000000, #442164);
 }
 main .details h2 {
   padding: 30px 0;
+  animation: gentleFloat 5s ease-in-out infinite;
 }
 
 main .details-cards {
@@ -86,15 +107,23 @@ main .details-cards .card {
   width: 320px;
   padding: 30px;
   border-radius: 12px;
-  border: 1px solid #fd4619;
-  background-color: #402659;
+  border: 1px solid #b14101;
+  background-color: #442164;
+}
+main .details-cards .card:hover {
+  box-shadow: 0 0 10px #b14101;
+  background-color: #2d1b47;
+}
+main .details-cards .card:hover img {
+  transform: rotate(10deg);
 }
 main .details-cards .card:hover .highlight {
-  color: #f06e42;
+  color: #ff7e33;
 }
 main .details-cards .card img {
   width: 100px;
   margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
 }
 main .details-cards .card p {
   font-size: 1rem;
@@ -128,9 +157,13 @@ main .costumes-cards {
 }
 main .costumes-cards .costumes-cards_card {
   width: 220px;
-  background-color: #1a0f2e;
   border-radius: 12px;
   padding: 40px 20px;
+  background: radial-gradient(circle, rgba(177, 66, 1, 0.5411764706) 0%, #2d1b47 70%);
+  box-shadow: 0 5px 20px rgba(177, 66, 1, 0.5411764706);
+}
+main .costumes-cards .costumes-cards_card:hover img {
+  animation: balancar 0.5s ease-in-out infinite;
 }
 main .costumes-cards .costumes-cards_card img {
   width: 110px;
@@ -148,14 +181,17 @@ main .costumes-cards .costumes-cards_card p {
 
 main .costumes .costumes-competition {
   width: 95%;
-  background-color: #211e1c;
-  margin: 60px auto;
+  margin: 100px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   padding: 40px;
   border-radius: 12px;
+  background: linear-gradient(120deg, #442164, #1a0f2e, #442164);
+  box-shadow: 0 0 15px rgba(177, 66, 1, 0.5411764706);
+  background-size: 300% 300%;
+  animation: gradient-animation 10s ease infinite;
 }
 main .costumes .costumes-competition .costumes-competition_title {
   display: flex;
@@ -165,19 +201,20 @@ main .costumes .costumes-competition .costumes-competition_title {
 }
 main .costumes .costumes-competition .costumes-competition_title img {
   width: 24px;
+  animation: pulse 5s ease-in-out infinite;
 }
 main .costumes .costumes-competition .costumes-competition_title h4 {
   font-size: 2rem;
-  color: #fd4619;
+  color: #b14101;
 }
 main .costumes .costumes-competition p {
   font-size: 1.25rem;
 }
 main .costumes .costumes-competition button {
-  background-color: #fd4619;
-  border: none;
+  background-color: #b14101;
+  border: 1px solid #b14101;
   border-radius: 50px;
-  padding: 15px 30px;
+  padding: 10px 30px;
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -185,7 +222,9 @@ main .costumes .costumes-competition button {
   cursor: pointer;
 }
 main .costumes .costumes-competition button:hover {
-  background-color: #f06e42;
+  box-shadow: 0 4px 10px #ff7e33;
+  border: 1px solid #ff7e33;
+  background-color: transparent;
 }
 main .costumes .costumes-competition button img {
   width: 40px;
@@ -197,21 +236,24 @@ main .form {
   align-items: center;
   gap: 40px;
   padding-block: 100px;
+  background-image: linear-gradient(to top, #1a0f2e, #442164);
 }
 main .form p {
   font-size: 1.5rem;
 }
 main .form form {
-  background-color: #402659;
+  display: flex;
+  flex-direction: column;
+  background-color: #442164;
   width: 40vw;
   border-radius: 12px;
-  border: 1px solid #fd4619;
+  border: 1px solid #b14101;
   padding: 40px;
+  gap: 30px;
 }
 main .form form div {
   display: flex;
   flex-direction: column;
-  margin: 24px 0;
 }
 main .form form div label {
   display: flex;
@@ -224,6 +266,7 @@ main .form form div label {
 main .form form div img {
   width: 30px;
   height: 30px;
+  animation: balancar 0.5s ease-in-out infinite;
 }
 main .form form div input,
 main .form form div select,
@@ -232,7 +275,7 @@ main .form form div textarea {
   padding: 15px;
   outline: none;
   border-radius: 12px;
-  border: 2px solid #fd4619;
+  border: 2px solid #b14101;
   background-color: #2d1b47;
   color: #ffffff;
   font-size: 1.2rem;
@@ -240,19 +283,83 @@ main .form form div textarea {
 main .form form textarea {
   height: 130px;
 }
+main .form input {
+  background-color: #b14101;
+  border: 1px solid #b14101;
+  border-radius: 50px;
+  padding: 15px 30px;
+  font-size: 1.25rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+main .form input:hover {
+  box-shadow: 0 4px 10px #ff7e33;
+  border: 1px solid #ff7e33;
+  background-color: #2d1b47;
+}
+main .form span {
+  color: #beb4a7;
+  font-size: 1rem;
+  text-align: center;
+}
+main .form span a {
+  color: #ff7e33;
+}
 
 footer {
-  height: 100px;
+  height: 130px;
   background-color: #1a0f2e;
   text-align: center;
-  padding: 30px;
+  padding: 20px;
+  position: relative;
 }
 footer p {
   font-size: 1.2rem;
 }
 footer p span {
-  color: #f06e42;
+  color: #ff7e33;
 }
 footer img {
-  width: 20px;
+  margin-top: 20px;
+  width: 40px;
+  animation: gentleFloat 4s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+@keyframes balancar {
+  0% {
+    transform: rotate(0deg); /* Começa normal */
+  }
+  50% {
+    transform: rotate(10deg); /* Gira para o lado na metade do tempo */
+  }
+  100% {
+    transform: rotate(0deg); /* Volta ao normal no final */
+  }
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }/*# sourceMappingURL=style.css.map */
