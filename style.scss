@@ -34,6 +34,9 @@ h2 {
   -webkit-text-fill-color: transparent;
   font-size: 5rem;
   animation: gentleFloat 4s ease-in-out infinite;
+  @media (max-width: 440px) {
+    font-size: 3rem;
+  }
 }
 p {
   color: $gray100;
@@ -75,6 +78,18 @@ p {
   p {
     font-size: 2rem;
   }
+  @media (max-width: 440px) {
+    .subtitle {
+      font-size: 3rem;
+    }
+    h1 {
+      font-size: 5rem;
+    }
+    p {
+      font-size: 1.7rem;
+      text-align: center;
+    }
+  }
 }
 .hero .hero-btns {
   display: flex;
@@ -101,6 +116,9 @@ p {
       margin: 0 6px -8px 0;
     }
   }
+  @media (max-width: 440px) {
+    flex-direction: column;
+  }
 }
 //corpo do site
 //detalhes do evento
@@ -114,10 +132,17 @@ main .details {
     padding: 30px 0;
     animation: gentleFloat 5s ease-in-out infinite;
   }
+  @media (max-width: 440px) {
+    padding: 20px;
+  }
 }
 main .details-cards {
   display: flex;
   justify-content: space-around;
+  @media (max-width: 440px) {
+    flex-direction: column;
+    align-items: center;
+  }
   .card {
     margin-top: 60px;
     width: 320px;
@@ -169,6 +194,13 @@ main .costumes {
     width: 700px;
     margin: 40px auto;
   }
+  @media (max-width: 440px) {
+    padding: 20px;
+
+    .costumes-p {
+      width: 300px;
+    }
+  }
 }
 
 main .costumes-cards {
@@ -184,7 +216,6 @@ main .costumes-cards {
 
     &:hover {
       img {
-        // transform: rotate(-15deg);
         animation: balancar 0.5s ease-in-out infinite;
       }
     }
@@ -192,7 +223,6 @@ main .costumes-cards {
     img {
       width: 110px;
       height: 150px;
-      //transition: transform 0.3s ease-in-out;
     }
     h3 {
       font-size: 1.25rem;
@@ -202,6 +232,23 @@ main .costumes-cards {
     p {
       font-size: 1rem;
       margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 440px) {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+
+    .costumes-cards_card {
+      width: 200px;
+      padding: 10px;
+    }
+    h3 {
+      margin: 10px 0;
+    }
+    img {
+      animation: balancar 2s ease-in-out infinite;
     }
   }
 }
@@ -278,49 +325,62 @@ main .form {
   p {
     font-size: 1.5rem;
   }
-  form {
+
+  @media (max-width: 440px) {
+    p {
+      padding: 20px;
+      text-align: center;
+    }
+  }
+}
+main form {
+  display: flex;
+  flex-direction: column;
+  background-color: $purple100;
+  width: 40vw;
+  border-radius: 12px;
+  border: 1px solid $orange100;
+  padding: 40px;
+  gap: 30px;
+  div {
     display: flex;
     flex-direction: column;
-    background-color: $purple100;
-    width: 40vw;
-    border-radius: 12px;
-    border: 1px solid $orange100;
-    padding: 40px;
-    gap: 30px;
-    div {
+
+    label {
       display: flex;
-      flex-direction: column;
-
-      label {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: $white;
-        font-size: 1.25rem;
-        margin-bottom: 10px;
-      }
-      img {
-        width: 30px;
-        height: 30px;
-        animation: balancar 0.5s ease-in-out infinite;
-      }
-
-      input,
-      select,
-      textarea {
-        width: 100%;
-        padding: 15px;
-        outline: none;
-        border-radius: 12px;
-        border: 2px solid $orange100;
-        background-color: $purple300;
-        color: $white;
-        font-size: 1.2rem;
-      }
+      align-items: center;
+      gap: 10px;
+      color: $white;
+      font-size: 1.25rem;
+      margin-bottom: 10px;
     }
+    img {
+      width: 30px;
+      height: 30px;
+      animation: balancar 0.5s ease-in-out infinite;
+    }
+
+    input,
+    select,
     textarea {
-      height: 130px;
+      width: 100%;
+      padding: 15px;
+      outline: none;
+      border-radius: 12px;
+      border: 1px solid $orange100;
+      background-color: $purple300;
+      color: $white;
+      font-size: 1.2rem;
+
+      &:hover {
+        box-shadow: 0 4px 10px $orange;
+        border: 1px solid $orange;
+        background-color: $purple300;
+      }
     }
+  }
+  textarea {
+    height: 130px;
   }
   input {
     background-color: $orange100;
@@ -330,7 +390,6 @@ main .form {
     font-size: 1.25rem;
     color: $white;
     cursor: pointer;
-
     &:hover {
       box-shadow: 0 4px 10px $orange;
       border: 1px solid $orange;
@@ -344,17 +403,24 @@ main .form {
 
     a {
       color: $orange;
+
+      &:hover {
+        text-shadow: 0 4px 30px $orange;
+      }
     }
+  }
+  @media (max-width: 440px) {
+    width: 90%;
+    padding: 40px 20px;
   }
 }
 
 //rodapé
 footer {
-  height: 130px;
+  height: 140px;
   background-color: $purple200;
   text-align: center;
   padding: 20px;
-  position: relative;
 
   p {
     font-size: 1.2rem;
@@ -368,6 +434,13 @@ footer {
     margin-top: 20px;
     width: 40px;
     animation: gentleFloat 4s ease-in-out infinite;
+  }
+  @media (max-width: 440px) {
+    p {
+      display: flex;
+      flex-direction: column;
+      padding: 0 40px;
+    }
   }
 }
 

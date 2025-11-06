@@ -23,6 +23,12 @@ h2 {
   font-size: 5rem;
   animation: gentleFloat 4s ease-in-out infinite;
 }
+@media (max-width: 440px) {
+  h1,
+  h2 {
+    font-size: 3rem;
+  }
+}
 
 p {
   color: #beb4a7;
@@ -61,6 +67,18 @@ p {
 .hero p {
   font-size: 2rem;
 }
+@media (max-width: 440px) {
+  .hero .subtitle {
+    font-size: 3rem;
+  }
+  .hero h1 {
+    font-size: 5rem;
+  }
+  .hero p {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+}
 
 .hero .hero-btns {
   display: flex;
@@ -86,6 +104,11 @@ p {
   width: 34px;
   margin: 0 6px -8px 0;
 }
+@media (max-width: 440px) {
+  .hero .hero-btns {
+    flex-direction: column;
+  }
+}
 
 main .details {
   text-align: center;
@@ -97,10 +120,21 @@ main .details h2 {
   padding: 30px 0;
   animation: gentleFloat 5s ease-in-out infinite;
 }
+@media (max-width: 440px) {
+  main .details {
+    padding: 20px;
+  }
+}
 
 main .details-cards {
   display: flex;
   justify-content: space-around;
+}
+@media (max-width: 440px) {
+  main .details-cards {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 main .details-cards .card {
   margin-top: 60px;
@@ -150,6 +184,14 @@ main .costumes .costumes-p {
   width: 700px;
   margin: 40px auto;
 }
+@media (max-width: 440px) {
+  main .costumes {
+    padding: 20px;
+  }
+  main .costumes .costumes-p {
+    width: 300px;
+  }
+}
 
 main .costumes-cards {
   display: flex;
@@ -177,6 +219,23 @@ main .costumes-cards .costumes-cards_card h3 {
 main .costumes-cards .costumes-cards_card p {
   font-size: 1rem;
   margin-bottom: 20px;
+}
+@media (max-width: 440px) {
+  main .costumes-cards {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+  }
+  main .costumes-cards .costumes-cards_card {
+    width: 200px;
+    padding: 10px;
+  }
+  main .costumes-cards h3 {
+    margin: 10px 0;
+  }
+  main .costumes-cards img {
+    animation: balancar 2s ease-in-out infinite;
+  }
 }
 
 main .costumes .costumes-competition {
@@ -241,7 +300,14 @@ main .form {
 main .form p {
   font-size: 1.5rem;
 }
-main .form form {
+@media (max-width: 440px) {
+  main .form p {
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+main form {
   display: flex;
   flex-direction: column;
   background-color: #442164;
@@ -251,11 +317,11 @@ main .form form {
   padding: 40px;
   gap: 30px;
 }
-main .form form div {
+main form div {
   display: flex;
   flex-direction: column;
 }
-main .form form div label {
+main form div label {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -263,27 +329,34 @@ main .form form div label {
   font-size: 1.25rem;
   margin-bottom: 10px;
 }
-main .form form div img {
+main form div img {
   width: 30px;
   height: 30px;
   animation: balancar 0.5s ease-in-out infinite;
 }
-main .form form div input,
-main .form form div select,
-main .form form div textarea {
+main form div input,
+main form div select,
+main form div textarea {
   width: 100%;
   padding: 15px;
   outline: none;
   border-radius: 12px;
-  border: 2px solid #b14101;
+  border: 1px solid #b14101;
   background-color: #2d1b47;
   color: #ffffff;
   font-size: 1.2rem;
 }
-main .form form textarea {
+main form div input:hover,
+main form div select:hover,
+main form div textarea:hover {
+  box-shadow: 0 4px 10px #ff7e33;
+  border: 1px solid #ff7e33;
+  background-color: #2d1b47;
+}
+main form textarea {
   height: 130px;
 }
-main .form input {
+main form input {
   background-color: #b14101;
   border: 1px solid #b14101;
   border-radius: 50px;
@@ -292,26 +365,34 @@ main .form input {
   color: #ffffff;
   cursor: pointer;
 }
-main .form input:hover {
+main form input:hover {
   box-shadow: 0 4px 10px #ff7e33;
   border: 1px solid #ff7e33;
   background-color: #2d1b47;
 }
-main .form span {
+main form span {
   color: #beb4a7;
   font-size: 1rem;
   text-align: center;
 }
-main .form span a {
+main form span a {
   color: #ff7e33;
+}
+main form span a:hover {
+  text-shadow: 0 4px 30px #ff7e33;
+}
+@media (max-width: 440px) {
+  main form {
+    width: 90%;
+    padding: 40px 20px;
+  }
 }
 
 footer {
-  height: 130px;
+  height: 140px;
   background-color: #1a0f2e;
   text-align: center;
   padding: 20px;
-  position: relative;
 }
 footer p {
   font-size: 1.2rem;
@@ -323,6 +404,13 @@ footer img {
   margin-top: 20px;
   width: 40px;
   animation: gentleFloat 4s ease-in-out infinite;
+}
+@media (max-width: 440px) {
+  footer p {
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+  }
 }
 
 @keyframes gentleFloat {
