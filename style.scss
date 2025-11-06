@@ -34,8 +34,10 @@ h2 {
   -webkit-text-fill-color: transparent;
   font-size: 5rem;
   animation: gentleFloat 4s ease-in-out infinite;
+
   @media (max-width: 440px) {
     font-size: 3rem;
+    text-align: center;
   }
 }
 p {
@@ -195,7 +197,7 @@ main .costumes {
     margin: 40px auto;
   }
   @media (max-width: 440px) {
-    padding: 20px;
+    padding: 10px;
 
     .costumes-p {
       width: 300px;
@@ -222,7 +224,7 @@ main .costumes-cards {
 
     img {
       width: 110px;
-      height: 150px;
+      height: 140px;
     }
     h3 {
       font-size: 1.25rem;
@@ -237,13 +239,8 @@ main .costumes-cards {
 
   @media (max-width: 440px) {
     flex-wrap: wrap;
-    align-items: center;
-    gap: 10px;
+    gap: 5px;
 
-    .costumes-cards_card {
-      width: 200px;
-      padding: 10px;
-    }
     h3 {
       margin: 10px 0;
     }

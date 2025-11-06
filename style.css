@@ -27,6 +27,7 @@ h2 {
   h1,
   h2 {
     font-size: 3rem;
+    text-align: center;
   }
 }
 
@@ -186,7 +187,7 @@ main .costumes .costumes-p {
 }
 @media (max-width: 440px) {
   main .costumes {
-    padding: 20px;
+    padding: 10px;
   }
   main .costumes .costumes-p {
     width: 300px;
@@ -209,7 +210,7 @@ main .costumes-cards .costumes-cards_card:hover img {
 }
 main .costumes-cards .costumes-cards_card img {
   width: 110px;
-  height: 150px;
+  height: 140px;
 }
 main .costumes-cards .costumes-cards_card h3 {
   font-size: 1.25rem;
@@ -223,12 +224,7 @@ main .costumes-cards .costumes-cards_card p {
 @media (max-width: 440px) {
   main .costumes-cards {
     flex-wrap: wrap;
-    align-items: center;
-    gap: 10px;
-  }
-  main .costumes-cards .costumes-cards_card {
-    width: 200px;
-    padding: 10px;
+    gap: 5px;
   }
   main .costumes-cards h3 {
     margin: 10px 0;
